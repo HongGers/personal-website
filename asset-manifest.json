@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9ba272cf.css",
+    "main.js": "/static/js/main.86c40c19.js",
+    "static/media/tool.jpg": "/static/media/tool.c170906bfc672b217ac5.jpg",
+    "static/media/AlegreyaSans-Medium.ttf": "/static/media/AlegreyaSans-Medium.8af01fa4b44210bab0e7.ttf",
+    "static/media/AlegreyaSans-Light.ttf": "/static/media/AlegreyaSans-Light.02e0ee97fec686c68914.ttf",
+    "static/media/article.jpg": "/static/media/article.eb878bba6c24c8aa9319.jpg",
+    "static/media/computer.jpg": "/static/media/computer.e9791c2e5705b028134a.jpg",
+    "static/media/cover.png": "/static/media/cover.246872a1fccecf4a1e73.png",
+    "index.html": "/index.html",
+    "main.9ba272cf.css.map": "/static/css/main.9ba272cf.css.map",
+    "main.86c40c19.js.map": "/static/js/main.86c40c19.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ba272cf.css",
+    "static/js/main.86c40c19.js"
+  ]
+}
