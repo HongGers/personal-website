@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://honggers.github.io/personal-website/",
   "dependencies": {
     "gh-pages": "^6.1.1",
     "react": "^18.2.0",
