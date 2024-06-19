@@ -1,0 +1,398 @@
+.pos_1 {
+    @keyframes fadeInLeft {
+        0% {
+            left: -3%;
+            opacity: 0;
+            transform: rotateZ(-5deg) scale(0.8);
+        }
+
+        100% {
+            left: 3%;
+            opacity: .8;
+            transform: rotateZ(-5deg) scale(0.9);
+        }
+    }
+
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    position: absolute;
+    display: flex;
+    left: 3%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all .5s ease;
+    transform: rotateZ(-5deg) scale(0.9);
+    opacity: .7;
+}
+
+.pos_2 {
+    width: 50%;
+    height: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    position: absolute;
+    display: flex;
+    left: 25%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    transition: all .5s ease;
+    transform: rotateZ(0deg) scale(1);
+}
+
+.pos_3 {
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    position: absolute;
+    display: flex;
+    left: 57%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all .5s ease;
+    transform: rotateZ(5deg) scale(0.9);
+    opacity: .7;
+}
+
+.card {
+    display: flex;
+    cursor: pointer;
+
+    .left {
+        display: flex;
+        flex: 1 1 100px;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        position: relative;
+
+        background: {
+            size: cover;
+            repeat: no-repeat;
+            position: left top;
+        }
+
+        .side {
+            width: 50px;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .badge_area {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 100px;
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+        background-color: white;
+        position: relative;
+
+        .bg_mask {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+            border-radius: inherit;
+        }
+
+        .title {
+            border-radius: inherit;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            flex: 0 1 30%;
+            z-index: 2;
+
+            font: {
+                size: 30px;
+                family: Medium;
+            }
+        }
+
+        .rwd_sap {
+            display: none;
+            z-index: 2;
+        }
+
+        .content {
+            padding: 0 20px;
+            flex: 1 1 30%;
+            color: grey;
+            z-index: 2;
+
+            font: {
+                size: 20px;
+                family: Light;
+            }
+        }
+
+        .badge_area {
+            position: absolute;
+            right: 0px;
+            bottom: 10px;
+            width: auto;
+            max-width: 100%;
+            display: flex;
+            height: auto;
+            justify-content: right;
+            z-index: 2;
+        }
+    }
+}
+
+.badge {
+    width: auto;
+    max-width: 180px;
+    overflow: hidden;
+    height: 25px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 8px;
+    color: black;
+    white-space: nowrap;
+
+    font: {
+        size: 15px;
+        family: Medium;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.fade_out_left {
+    @keyframes fadeOutLeft {
+        0% {
+            left: 3%;
+            opacity: .8;
+            transform: rotateZ(-5deg) scale(0.9);
+        }
+
+        100% {
+            left: -3%;
+            opacity: 0;
+            transform: rotateZ(-5deg) scale(0.8);
+        }
+    }
+
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    position: absolute;
+    display: flex;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all .5s ease;
+    transform: rotateZ(-5deg) scale(0.9);
+
+    animation:fadeOutLeft .3s ease forwards;
+}
+
+.fade_in_left {
+    @keyframes fadeInLeft {
+        0% {
+            left: -3%;
+            opacity: 0;
+            transform: rotateZ(-5deg) scale(0.8);
+        }
+
+        100% {
+            left: 3%;
+            opacity: .8;
+            transform: rotateZ(-5deg) scale(0.9);
+        }
+    }
+
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    position: absolute;
+    display: flex;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transform: rotateZ(-5deg) scale(0.9);
+
+    animation:fadeInLeft .3s ease forwards;
+}
+
+.fade_out_right {
+    @keyframes fadeOutRight {
+        0% {
+            left: 57%;
+            opacity: .8;
+            transform: rotateZ(5deg) scale(0.9);
+        }
+
+        100% {
+            left: 63%;
+            opacity: 0;
+            transform: rotateZ(5deg) scale(0.8);
+        }
+    }
+
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    position: absolute;
+    display: flex;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all .5s ease;
+    transform: rotateZ(5deg) scale(0.9);
+    opacity: .8;
+
+    animation:fadeOutRight .3s ease forwards;
+}
+
+.fade_in_right {
+    @keyframes fadeInRight {
+        0% {
+            left: 63%;
+            opacity: 0;
+            transform: rotateZ(5deg) scale(0.8);
+        }
+
+        100% {
+            left: 57%;
+            opacity: .8;
+            transform: rotateZ(5deg) scale(0.9);
+        }
+    }
+
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    position: absolute;
+    display: flex;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transform: rotateZ(-5deg) scale(0.9);
+
+    animation:fadeInRight .3s ease forwards;
+}
+
+@media screen and (max-width : 768px) {
+    .card {
+        .left {
+            display: none;
+        }
+
+        .right {
+            border-radius: inherit;
+
+            background: {
+                size: cover;
+                repeat: no-repeat;
+                position: center bottom;
+            }
+
+            .bg_mask {
+                background: linear-gradient(white, rgba(255, 255, 255, .5));
+            }
+
+            .title {
+                font-size: 26px;
+                flex: 0 0 18%;
+                align-items: flex-end;
+            }
+
+            .rwd_sap {
+                display: flex;
+                width: 80%;
+                height: 10px;
+                margin: 0 20px;
+                background: linear-gradient(90deg, black, transparent);
+                flex: 0 0 2px;
+            }
+
+            .content {
+                overflow: hidden;
+                margin-top: 20px;
+                font-size: 18px;
+                flex: 1 1;
+            }
+
+            .badge_area {
+                flex-wrap: wrap;
+
+                .badge {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .pos_1,
+    .pos_3 {
+        display: none;
+    }
+
+    .pos_2 {
+        width: 80%;
+        left: 10%;
+    }
+
+    .badge {
+        height: auto;
+
+        font: {
+            size: 14px;
+            family: Medium;
+        }
+    }
+}

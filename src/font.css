@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Light";
+    src: local("AlegreyaSans_Light"),
+        url("./fonts/Alegreya_Sans/AlegreyaSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Medium";
+    src: local("AlegreyaSans_Medium"),
+        url("./fonts/Alegreya_Sans/AlegreyaSans-Medium.ttf") format("truetype");
+}
