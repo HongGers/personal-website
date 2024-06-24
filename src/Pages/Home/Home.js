@@ -5,6 +5,7 @@ import Skills from '../../Components/Skills/Skills';
 import Contact from '../../Components/Contact/Contact';
 import Blogs from '../../Components/Blogs/Blogs';
 
+import profile_photo from '../../Images/profile-photo.jpg';
 import tool_jpg from '../../Images/tool.jpg';
 
 function Home() {
@@ -16,7 +17,11 @@ function Home() {
             <div className={style.content}>
 
                 <div className={style.about}>
-                    <div className={style.pro_pic}></div>
+                    <div className={style.pro_pic} style={{
+                        backgroundImage: `url(${profile_photo})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover'
+                    }}></div>
                     <div className={style.right}>
                         <label className={style.title}>關於我</label>
                         <div className={style.intro}>
@@ -50,7 +55,7 @@ function Home() {
 
                 <div className={style.contact}>
                     <Contact />
-                </div>                
+                </div>
             </div>
         </div>
     )
