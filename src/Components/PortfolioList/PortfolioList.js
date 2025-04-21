@@ -27,6 +27,13 @@ function PortfolioList(props) {
 
     const [isAnimating, setIsAnimating] = useState(false);
 
+    const isReachingLeftBound = () => {
+        return Math.min(...cards.map(card => card.index)) === 2;
+    }
+    const isReachingRightBound = () => {
+        return Math.max(...cards.map(card => card.index)) === 2;
+    }
+
     const handleOnClick = (e) => {
         const setCardsIndex = (amount) => {
             setCards(cards.map(card => ({ ...card, index: card.index + amount })));
@@ -35,27 +42,14 @@ function PortfolioList(props) {
         const value = e.target.value ?
             e.target.value : e.target.parentNode.value;
 
-        if (Math.max(...cards.map(card => card.index)) === 2) {
-            if (value === 'last') {
-                setIsAnimating(true);
-                setCardsIndex(1);
-                setTimeout(() => setIsAnimating(false), 300);
-            }
-            else return;
+        if ((isReachingLeftBound() && value === 'last') ||
+            (isReachingRightBound() && value === 'next')) {
+            return;
         }
-        else if (Math.min(...cards.map(card => card.index)) === 2) {
-            if (value === 'next') {
-                setIsAnimating(true);
-                setCardsIndex(-1);
-                setTimeout(() => setIsAnimating(false), 300);
-            }
-            else return;
-        }
-        else {
-            setIsAnimating(true);
-            setCardsIndex(value === 'last' ? 1 : -1);
-            setTimeout(() => setIsAnimating(false), 300);
-        }
+
+        setIsAnimating(true);
+        setCardsIndex(value === 'last' ? 1 : -1);
+        setTimeout(() => setIsAnimating(false), 300);
     }
 
     return (
